@@ -2,19 +2,23 @@ package main
 
 import (
 	"fmt"
-	"sort"
+	"os"
 )
 
-/* func Contains(number_array []int, 2 int) bool {
-	for _, n := range number_array {
-		if 2 == n {
-			return true
-		}
-	}
-	return false
-} */
-
 func main() {
-	var number_array = []string{"1", "2", "3"}
-	fmt.Println(sort.SearchStrings(number_array, "3"))
+	var a int
+	var b int
+	fmt.Println("Введите значение переменной а ")
+	fmt.Fscan(os.Stdin, &a)
+
+	fmt.Println("Введите значение переменной b ")
+	fmt.Fscan(os.Stdin, &b)
+
+	if a > b {
+		fmt.Println("a больше b")
+	} else if a < b {
+		fmt.Println("a меньше b")
+	} else {
+		fmt.Println("a равняется b")
+	}
 }
